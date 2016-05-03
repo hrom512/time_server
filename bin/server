@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'daemons'
+
+Daemons.run(File.expand_path('../lib/time_server.rb', __dir__),
+            dir: File.expand_path('../tmp', __dir__),
+            dir_mode: :normal)
