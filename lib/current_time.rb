@@ -1,5 +1,4 @@
 require 'tzinfo'
-require 'byebug'
 
 # Current time for timezones
 class CurrentTime
