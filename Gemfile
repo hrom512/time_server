@@ -5,6 +5,8 @@ gem 'tzinfo'
 gem 'eventmachine'
 gem 'eventmachine_httpserver'
 
+gem 'daemons'
+
 group :development, :test do
   gem 'rubocop', require: false
   gem 'rspec'
