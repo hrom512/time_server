@@ -7,6 +7,8 @@ GEM
       simplecov (>= 0.7.1, < 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    eventmachine (1.2.0.1)
+    eventmachine_httpserver (0.2.1)
     fuubar (2.0.0)
       rspec (~> 3.0)
       ruby-progressbar (~> 1.4)
@@ -52,6 +54,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   codeclimate-test-reporter
+  eventmachine
+  eventmachine_httpserver
   fuubar
   rspec
   rubocop

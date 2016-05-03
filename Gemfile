@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'tzinfo'
 
+gem 'eventmachine'
+gem 'eventmachine_httpserver'
+
 group :development, :test do
   gem 'rubocop', require: false
   gem 'rspec'
