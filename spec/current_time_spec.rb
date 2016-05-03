@@ -26,7 +26,11 @@ describe CurrentTime do
     it { expect(current_time.in_city('New York')).to eq(new_york_time) }
 
     context 'with invalid city' do
-      it { expect { current_time.in_city('Invalid') }.to raise_error(CurrentTime::TimezoneNotFound) }
+      it 'raise error' do
+        expect {
+          current_time.in_city('Invalid')
+        }.to raise_error(CurrentTime::TimezoneNotFound, 'Timezone not found')
+      end
     end
   end
 end
