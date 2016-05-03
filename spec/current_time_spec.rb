@@ -13,7 +13,7 @@ describe CurrentTime do
 
   let(:utc_time) { Time.utc(2016, 1, 1, 12, 15) }     # 12:15
   let(:moscow_time) { Time.utc(2016, 1, 1, 15, 15) }  # 15:15 (+03:00)
-  let(:new_york_time) { Time.utc(2016, 1, 1, 8, 15) } # 08:15 (-04:00)
+  let(:new_york_time) { Time.utc(2016, 1, 1, 7, 15) } # 08:15 (-05:00)
 
   let(:current_time) { described_class.new }
 
