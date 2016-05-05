@@ -11,9 +11,9 @@ describe CurrentTime do
     Timecop.return
   end
 
-  let(:utc_time) { Time.utc(2016, 1, 1, 12, 15) }     # 12:15
-  let(:moscow_time) { Time.utc(2016, 1, 1, 15, 15) }  # 15:15 (+03:00)
-  let(:new_york_time) { Time.utc(2016, 1, 1, 7, 15) } # 08:15 (-05:00)
+  let(:utc_time) { Time.utc(2016, 5, 1, 12, 15, 1) }     # 2016.05.01 12:15:01 (UTC)
+  let(:moscow_time) { Time.utc(2016, 5, 1, 15, 15, 1) }  # 2016.05.01 15:15:01 (+03:00)
+  let(:new_york_time) { Time.utc(2016, 5, 1, 8, 15, 1) } # 2016.05.01 08:15:01 (-04:00)
 
   let(:current_time) { described_class.new }
 

@@ -7,9 +7,9 @@ describe CurrentTimeResponse do
 
   let(:response) { described_class.new(current_time, cities) }
 
-  let(:utc_time) { Time.utc(2016, 1, 2, 12, 15, 1) }
-  let(:moscow_time) { Time.utc(2016, 1, 2, 15, 15, 1) }
-  let(:new_york_time) { Time.utc(2016, 1, 2, 7, 15, 1) }
+  let(:utc_time) { Time.utc(2016, 5, 1, 12, 15, 1) }     # 2016.05.01 12:15:01 (UTC)
+  let(:moscow_time) { Time.utc(2016, 5, 1, 15, 15, 1) }  # 2016.05.01 15:15:01 (+03:00)
+  let(:new_york_time) { Time.utc(2016, 5, 1, 8, 15, 1) } # 2016.05.01 08:15:01 (-04:00)
 
   before do
     allow(current_time).to receive(:utc).and_return(utc_time)
@@ -21,9 +21,9 @@ describe CurrentTimeResponse do
 
   describe '#build' do
     let(:response_content) do
-      content = 'UTC: 2016-01-02 12:15:01'
-      content << "\nMoscow: 2016-01-02 15:15:01"
-      content << "\nNew York: 2016-01-02 07:15:01"
+      content = 'UTC: 2016-05-01 12:15:01'
+      content << "\nMoscow: 2016-05-01 15:15:01"
+      content << "\nNew York: 2016-05-01 08:15:01"
       content << "\nInvalid: Timezone not found"
       content
     end
